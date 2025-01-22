@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dyxgbm85s6ngp"]
+
+[node name="Node2D" type="TextEdit"]
+offset_right = 673.0
+offset_bottom = 364.0
+text = "Assets Used:
+Caz Wolf Pixel Fantasy Generator itch.io
+Kauzz Modern+ and Midnight City itch.io"

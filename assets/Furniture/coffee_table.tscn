@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://cy65yb1vpaogr"]
+
+[ext_resource type="Texture2D" uid="uid://ce3gqsrrvdp8e" path="res://assets/tilemap/Tilesets/Living Room.png" id="1_ilr63"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8lb41"]
+size = Vector2(76.7707, 13.9391)
+
+[node name="Coffee Table" type="Node2D"]
+
+[node name="Coffee Table" type="StaticBody2D" parent="."]
+position = Vector2(-0.152596, -0.0528793)
+collision_layer = 8
+collision_mask = 20
+
+[node name="Coffee Table" type="Sprite2D" parent="Coffee Table"]
+position = Vector2(-0.566109, 17.7219)
+texture = ExtResource("1_ilr63")
+region_enabled = true
+region_rect = Rect2(393, 533, 76, 36)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coffee Table"]
+position = Vector2(-0.6651, 28.7485)
+shape = SubResource("RectangleShape2D_8lb41")

@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7021adekba8k"]
+
+[ext_resource type="Texture2D" uid="uid://ce3gqsrrvdp8e" path="res://assets/tilemap/Tilesets/Living Room.png" id="1_fw1cm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ebsi8"]
+size = Vector2(91.3735, 21.2307)
+
+[node name="TV Back" type="Node2D"]
+
+[node name="TV" type="StaticBody2D" parent="."]
+position = Vector2(0.768791, -0.731785)
+collision_layer = 8
+collision_mask = 20
+
+[node name="TV" type="Sprite2D" parent="TV"]
+position = Vector2(-0.527252, 13.4354)
+texture = ExtResource("1_fw1cm")
+region_enabled = true
+region_rect = Rect2(481, 600, 94, 69)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TV"]
+position = Vector2(-0.746668, 37.9944)
+shape = SubResource("RectangleShape2D_ebsi8")

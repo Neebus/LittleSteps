@@ -1,0 +1,9 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://dpchfclair60m"]
+
+[ext_resource type="FontFile" uid="uid://cqpfu483gdrsp" path="res://Menus/OpenSans-Bold.ttf" id="1_vohhl"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i1hcf"]
+
+[resource]
+default_font = ExtResource("1_vohhl")
+Panel/styles/panel = SubResource("StyleBoxTexture_i1hcf")

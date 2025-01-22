@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://btbytcd77namr"]
+
+[ext_resource type="Texture2D" uid="uid://ce3gqsrrvdp8e" path="res://assets/tilemap/Tilesets/Living Room.png" id="1_tla5o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_44f4l"]
+size = Vector2(77.5946, 13.0339)
+
+[node name="Side Table" type="Node2D"]
+
+[node name="Side Table" type="StaticBody2D" parent="."]
+position = Vector2(-0.0745087, 0.0293217)
+scale = Vector2(0.478974, 1.17678)
+collision_layer = 8
+collision_mask = 20
+
+[node name="Side Table" type="Sprite2D" parent="Side Table"]
+position = Vector2(0.868111, 17.7821)
+texture = ExtResource("1_tla5o")
+region_enabled = true
+region_rect = Rect2(393, 533, 76, 36)
+
+[node name="Plant 1" type="Sprite2D" parent="Side Table"]
+position = Vector2(3.75562, 1.44193)
+scale = Vector2(2.0878, 0.849779)
+texture = ExtResource("1_tla5o")
+region_enabled = true
+region_rect = Rect2(304, 13, 17, 28)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Side Table"]
+position = Vector2(0.938881, 29.1432)
+shape = SubResource("RectangleShape2D_44f4l")

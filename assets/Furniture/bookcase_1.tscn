@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://djeqknqn30tj"]
+
+[ext_resource type="Texture2D" uid="uid://ce3gqsrrvdp8e" path="res://assets/tilemap/Tilesets/Living Room.png" id="1_ofwrg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6wwdh"]
+size = Vector2(95.3499, 15.3124)
+
+[node name="Bookcase 1" type="Node2D"]
+
+[node name="Bookcase" type="StaticBody2D" parent="."]
+position = Vector2(-0.231892, -0.127541)
+collision_layer = 8
+collision_mask = 20
+
+[node name="Bookcase" type="Sprite2D" parent="Bookcase"]
+position = Vector2(0.500931, 0.535275)
+texture = ExtResource("1_ofwrg")
+region_enabled = true
+region_rect = Rect2(528, 0, 96, 96)
+
+[node name="Books 1" type="Sprite2D" parent="Bookcase"]
+position = Vector2(-23.6812, 12.0681)
+scale = Vector2(0.964832, 1.30839)
+texture = ExtResource("1_ofwrg")
+region_enabled = true
+region_rect = Rect2(677, 27, 38, 13)
+
+[node name="Plant 2" type="Sprite2D" parent="Bookcase"]
+position = Vector2(-28.9742, -10.5531)
+scale = Vector2(0.577753, 0.55943)
+texture = ExtResource("1_ofwrg")
+region_enabled = true
+region_rect = Rect2(296, 64, 30, 28)
+
+[node name="Books 2" type="Sprite2D" parent="Bookcase"]
+position = Vector2(19.0844, 12.2039)
+scale = Vector2(1.21655, 1.31255)
+texture = ExtResource("1_ofwrg")
+region_enabled = true
+region_rect = Rect2(677, 27, 38, 13)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bookcase"]
+position = Vector2(0.295715, 40.578)
+shape = SubResource("RectangleShape2D_6wwdh")

@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgwgkj8tgo6ex"]
+
+[ext_resource type="Texture2D" uid="uid://ce3gqsrrvdp8e" path="res://assets/tilemap/Tilesets/Living Room.png" id="1_2kp2f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t08qo"]
+size = Vector2(124.429, 38.7943)
+
+[node name="Couch 1" type="Node2D"]
+
+[node name="Couch" type="StaticBody2D" parent="."]
+position = Vector2(0.718719, 0.223553)
+collision_layer = 8
+collision_mask = 20
+
+[node name="Sprite2D" type="Sprite2D" parent="Couch"]
+position = Vector2(1.0852, 2.80238)
+texture = ExtResource("1_2kp2f")
+region_enabled = true
+region_rect = Rect2(11, 443, 127, 69)
+
+[node name="Pillow" type="Sprite2D" parent="Couch"]
+position = Vector2(43.4947, -2.19624)
+texture = ExtResource("1_2kp2f")
+region_enabled = true
+region_rect = Rect2(152, 124, 22, 27)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Couch"]
+y_sort_enabled = true
+position = Vector2(-0.439812, 21.5959)
+shape = SubResource("RectangleShape2D_t08qo")
