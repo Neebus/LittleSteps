@@ -1,0 +1,207 @@
+[gd_scene load_steps=13 format=3 uid="uid://s611k783die2"]
+
+[ext_resource type="Script" path="res://Menus/Character Selection/player_selection.gd" id="1_qpk6s"]
+[ext_resource type="Texture2D" uid="uid://lh5hpum7ov5r" path="res://Menus/Character Selection/CompositeSpritesheets/White Body.png" id="2_2wwkg"]
+[ext_resource type="Script" path="res://Menus/Character Selection/CompositeSpritesheets/CompositeSprites.gd" id="2_b6x51"]
+[ext_resource type="Texture2D" uid="uid://dvubcfqv0he4a" path="res://Menus/Character Selection/CompositeSpritesheets/Basic White Arms.png" id="3_03s3k"]
+[ext_resource type="Texture2D" uid="uid://bke7lqwsvlbme" path="res://Menus/Character Selection/CompositeSpritesheets/WhiteHair.png" id="5_fber6"]
+[ext_resource type="Texture2D" uid="uid://e21k10ig8grx" path="res://Menus/Character Selection/CompositeSpritesheets/Black Pants.png" id="6_rm7d5"]
+[ext_resource type="Texture2D" uid="uid://sdjsdv1cdiy0" path="res://Menus/Character Selection/CompositeSpritesheets/White T-Shirt.png" id="7_32itf"]
+[ext_resource type="Texture2D" uid="uid://cl5s0k8w546w2" path="res://Menus/Character Selection/CompositeSpritesheets/White Shoes.png" id="8_qlhoi"]
+[ext_resource type="Texture2D" uid="uid://2crkb1ja4jvh" path="res://Menus/Character Selection/CompositeSpritesheets/Red Hair Bow.png" id="9_5ni1r"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hopmb"]
+load_path = "res://.godot/imported/Blue Eyes.png-b387b26c64730155ff72277811e63d02.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wstgi"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_oewct"]
+
+[node name="Player" type="Node2D"]
+position = Vector2(401.858, 376.451)
+scale = Vector2(3.5132, 3.36604)
+script = ExtResource("1_qpk6s")
+
+[node name="CompositeSprites" type="Node2D" parent="."]
+scale = Vector2(2.58555, 2.58555)
+script = ExtResource("2_b6x51")
+
+[node name="Body" type="Sprite2D" parent="CompositeSprites"]
+texture = ExtResource("2_2wwkg")
+hframes = 9
+
+[node name="Arms" type="Sprite2D" parent="CompositeSprites"]
+texture = ExtResource("3_03s3k")
+hframes = 9
+
+[node name="Hair" type="Sprite2D" parent="CompositeSprites"]
+texture = ExtResource("5_fber6")
+hframes = 9
+
+[node name="Eyes" type="Sprite2D" parent="CompositeSprites"]
+texture = SubResource("CompressedTexture2D_hopmb")
+hframes = 16
+
+[node name="Pants" type="Sprite2D" parent="CompositeSprites"]
+texture = ExtResource("6_rm7d5")
+hframes = 9
+
+[node name="Shirt" type="Sprite2D" parent="CompositeSprites"]
+texture = ExtResource("7_32itf")
+hframes = 9
+
+[node name="Shoes" type="Sprite2D" parent="CompositeSprites"]
+texture = ExtResource("8_qlhoi")
+hframes = 9
+
+[node name="Accessories" type="Sprite2D" parent="CompositeSprites"]
+texture = ExtResource("9_5ni1r")
+hframes = 9
+
+[node name="Label" type="Label" parent="."]
+offset_left = 57.6158
+offset_top = -101.524
+offset_right = 211.616
+offset_bottom = -75.5237
+theme_override_font_sizes/font_size = 18
+text = "Change Hair Style"
+
+[node name="ChangeHairStyleRight" type="TextureButton" parent="."]
+offset_left = 122.278
+offset_top = -98.0371
+offset_right = 327.278
+offset_bottom = 107.963
+scale = Vector2(0.106, 0.1)
+texture_normal = SubResource("CompressedTexture2D_wstgi")
+metadata/_edit_use_anchors_ = true
+
+[node name="ChangeHairStyleLeft" type="TextureButton" parent="."]
+offset_left = 32.4532
+offset_top = -97.3923
+offset_right = 237.453
+offset_bottom = 108.608
+scale = Vector2(0.106, 0.1)
+texture_normal = SubResource("CompressedTexture2D_oewct")
+metadata/_edit_use_anchors_ = true
+
+[node name="ChangePantsColor" type="Button" parent="."]
+offset_left = 58.5708
+offset_top = -18.8229
+offset_right = 66.5708
+offset_bottom = -10.8229
+metadata/_edit_use_anchors_ = true
+
+[node name="ChangeShirtColor" type="Button" parent="."]
+offset_left = 58.8903
+offset_top = -39.1643
+offset_right = 66.8903
+offset_bottom = -31.1643
+metadata/_edit_use_anchors_ = true
+
+[node name="ChangeShoesColor" type="Button" parent="."]
+offset_left = 56.6538
+offset_top = 5.5202
+offset_right = 64.6538
+offset_bottom = 13.5202
+metadata/_edit_use_anchors_ = true
+
+[node name="ChangeAccessoriesColor" type="Button" parent="."]
+offset_left = 56.0148
+offset_top = 28.5294
+offset_right = 64.0148
+offset_bottom = 36.5294
+metadata/_edit_use_anchors_ = true
+
+[node name="RandomizeButton" type="Button" parent="."]
+offset_left = -83.1441
+offset_top = -97.5629
+offset_right = 11.8559
+offset_bottom = -66.5629
+text = "Randomize"
+metadata/_edit_use_anchors_ = true
+
+[node name="ChangeHairColor" type="Button" parent="."]
+offset_left = 55.647
+offset_top = -62.6492
+offset_right = 63.647
+offset_bottom = -54.6492
+metadata/_edit_use_anchors_ = true
+
+[node name="HairColorLabel" type="Label" parent="."]
+offset_left = 67.8356
+offset_top = -70.6548
+offset_right = 159.836
+offset_bottom = -47.6548
+theme_override_font_sizes/font_size = 16
+text = "Hair Color
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="ShirtColorLabel" type="Label" parent="."]
+offset_left = 71.6717
+offset_top = -46.7459
+offset_right = 163.672
+offset_bottom = -23.7459
+theme_override_font_sizes/font_size = 16
+text = "Shirt Color
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="BodyColorLabel" type="Label" parent="."]
+offset_left = 200.493
+offset_top = -62.0969
+offset_right = 292.494
+offset_bottom = -39.0969
+theme_override_font_sizes/font_size = 16
+text = "Body Color
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="ArmsColorLabel" type="Label" parent="."]
+offset_left = 201.384
+offset_top = -62.0969
+offset_right = 293.384
+offset_bottom = -39.0969
+theme_override_font_sizes/font_size = 16
+text = "Body Color
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="PantsColorLabel" type="Label" parent="."]
+offset_left = 71.7661
+offset_top = -26.8925
+offset_right = 163.766
+offset_bottom = -3.89255
+theme_override_font_sizes/font_size = 16
+text = "Pants Color
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="ShoesColorLabel" type="Label" parent="."]
+offset_left = 71.2666
+offset_top = -4.45962
+offset_right = 163.267
+offset_bottom = 18.5404
+theme_override_font_sizes/font_size = 16
+text = "Shoes Color
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="AccColorLabel" type="Label" parent="."]
+offset_left = 68.3911
+offset_top = 17.5492
+offset_right = 203.391
+offset_bottom = 40.5492
+theme_override_font_sizes/font_size = 16
+text = "Accessories Color
+"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="ChangeHairStyleRight" to="." method="_on_change_hair_style_right_pressed"]
+[connection signal="pressed" from="ChangeHairStyleLeft" to="." method="_on_change_hair_style_left_pressed"]
+[connection signal="pressed" from="ChangePantsColor" to="." method="_on_change_pants_color_pressed"]
+[connection signal="pressed" from="ChangeShirtColor" to="." method="_on_change_shirt_color_pressed"]
+[connection signal="pressed" from="ChangeShoesColor" to="." method="_on_change_shoes_color_pressed"]
+[connection signal="pressed" from="ChangeAccessoriesColor" to="." method="_on_change_accessories_color_pressed"]
+[connection signal="pressed" from="RandomizeButton" to="." method="_on_randomize_button_pressed"]
+[connection signal="pressed" from="ChangeHairColor" to="." method="_on_change_hair_color_pressed"]

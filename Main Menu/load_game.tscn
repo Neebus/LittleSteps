@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdtwfosysa35d"]
+
+[ext_resource type="Theme" uid="uid://34snuvowurub" path="res://Menus/Themes/Menu Buttons.tres" id="3_frnk7"]
+[ext_resource type="Script" path="res://Menus/Main Menu/back.gd" id="4_w1s0b"]
+[ext_resource type="AudioStream" uid="uid://5eaab3ghi5ja" path="res://Menus/Sounds/menu sfx 2.wav" id="5_n0ohl"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_right = -4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -211.751
+offset_top = -100.097
+offset_right = 648.249
+offset_bottom = 33.9028
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.487561, 0.615216)
+theme = ExtResource("3_frnk7")
+
+[node name="Back" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+size_flags_stretch_ratio = 0.0
+focus_mode = 0
+text = "Back"
+script = ExtResource("4_w1s0b")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VBoxContainer/Back"]
+stream = ExtResource("5_n0ohl")
+pitch_scale = 2.0
+
+[connection signal="pressed" from="VBoxContainer/Back" to="VBoxContainer/Back" method="_on_pressed"]
+[connection signal="finished" from="VBoxContainer/Back/AudioStreamPlayer2D" to="VBoxContainer/Back" method="_on_audio_stream_player_2d_finished"]
